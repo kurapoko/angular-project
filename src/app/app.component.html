@@ -5,3 +5,17 @@
     <mat-icon>home</mat-icon>
   </mat-toolbar>
 </header>
+<table>
+  <tr>
+    <th>ISBNコード</th>
+    <th>署名</th>
+    <th>価格</th>
+    <th>出版社</th>
+  </tr>
+  <tr *ngFor="let book of books">
+    <td>{{book.isbn}}</td>
+    <td>{{book.title}}</td>
+    <td>{{book.price}}</td>
+    <td>{{book.publisher}}</td>
+  </tr>
+</table>

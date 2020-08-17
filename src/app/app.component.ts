@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { Book } from './class/book';
+import { BookService } from './service/book.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'angular-project';
+export class AppComponent implements OnInit {
+  books: Book[];
+
+  constructor( private bookservice: BookService){
+  }
+
+  ngOnInit() {
+    this.books = this.bookservice.getBooks();
+  }
 }
