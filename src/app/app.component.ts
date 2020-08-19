@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Book } from './class/book';
 import { BookService } from './service/book.service';
+import { UseService } from './service/use.service';
 
 @Component({
   selector: 'app-root',

@@ -8,12 +8,15 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
 
 import { BookService } from './service/book.service';
+import { UseComponent } from './use/use.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UseComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +25,7 @@ import { BookService } from './service/book.service';
     MatToolbarModule,
     MatIconModule,
     HttpClientModule,
+    MatListModule,
   ],
   providers: [
     BookService
