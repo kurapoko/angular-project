@@ -25,3 +25,11 @@
   <app-use>/</app-use>
   <app-use>/</app-use>
 </mat-list>
+
+<mat-list>
+  <img matListAvatar [src]="image" alt="">
+  <h3 matLine>{{from}}</h3>
+</mat-list>
+
+<button (click)="showEvent($event)">現在時刻</button>
+<p>{{msg}}</p>

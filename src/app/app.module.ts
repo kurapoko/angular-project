@@ -8,7 +8,8 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import {MatListModule} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
 
 import { BookService } from './service/book.service';
 import { UseComponent } from './use/use.component';
@@ -26,6 +27,7 @@ import { UseComponent } from './use/use.component';
     MatIconModule,
     HttpClientModule,
     MatListModule,
+    MatTableModule,
   ],
   providers: [
     BookService
