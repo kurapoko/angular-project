@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { UseComponent } from './use/use.component';
 import { BookComponent } from './book/book.component';
 import { BookListComponent } from './book/book-list/book-list.component';
 import { BookItemComponent } from './book/book-item/book-item.component';
+import { BookEditComponent } from './book/book-edit/book-edit.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { BookItemComponent } from './book/book-item/book-item.component';
     UseComponent,
     BookComponent,
     BookListComponent,
-    BookItemComponent
+    BookItemComponent,
+    BookEditComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ import { BookItemComponent } from './book/book-item/book-item.component';
     HttpClientModule,
     MatListModule,
     MatTableModule,
+    FormsModule,
   ],
   providers: [
     BookService

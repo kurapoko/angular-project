@@ -8,7 +8,7 @@ import { Book } from '../../class/book';
 })
 export class BookItemComponent implements OnInit {
 
-  @Input() selectedBook: Book;
+  @Input('selectedBook') item: Book;
 
   constructor() { }
 

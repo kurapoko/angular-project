@@ -25,12 +25,30 @@ export class BookComponent implements OnInit {
     },
   ]
 
+
   constructor() { }
 
   ngOnInit() {
   }
 
   onClick(book: Book) {
-    this.selected = book;
+    this.selected = {
+      isbn: book.isbn,
+      title: book.title,
+      price: book.price,
+      publisher: book.publisher
+    };
+  }
+
+  onEdited(book: Book) {
+    for (let item of this.books) {
+      if (item.isbn === book.isbn) {
+        item.title = book.title;
+        item.price = book.price;
+        item.publisher = book.publisher;
+      }
+    }
+
+    this.selected = null;
   }
 }
