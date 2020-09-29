@@ -13,11 +13,17 @@ import { MatTableModule } from '@angular/material/table';
 
 import { BookService } from './service/book.service';
 import { UseComponent } from './use/use.component';
+import { BookComponent } from './book/book.component';
+import { BookListComponent } from './book/book-list/book-list.component';
+import { BookItemComponent } from './book/book-item/book-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UseComponent
+    UseComponent,
+    BookComponent,
+    BookListComponent,
+    BookItemComponent
   ],
   imports: [
     BrowserModule,

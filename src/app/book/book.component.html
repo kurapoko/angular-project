@@ -1,0 +1,4 @@
+<div *ngFor="let item of books">
+  <a href="#" (click)="onClick(item)">{{item.title}}</a>
+</div>
+<app-book-item [selectedBook]="selected"></app-book-item>
