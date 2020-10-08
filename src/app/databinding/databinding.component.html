@@ -1,1 +1,15 @@
-<p>databinding works!</p>
+<h1>{{name}}</h1>
+<ul class="list">
+  <li *ngFor="let item of list">
+    <span class="list__id">{{ item.id }}</span>
+    <span class="list__name">{{ item.name }}</span>
+    <img [src]="image" alt="">
+  </li>
+</ul>
+<h2>文字列として出力</h2>
+<div>{{sanitizeHtml}}</div>
+<h2>innerHTMLとして出力</h2>
+<div [innerHTML]="sanitizeHtml"></div>
+<h2>サニタイズした上で出力</h2>
+<div [innerHTML]="safeMsg"></div>
+<iframe [src]="safeUrl" frameborder="0"></iframe>
