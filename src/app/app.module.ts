@@ -20,6 +20,7 @@ import { BookListComponent } from './book/book-list/book-list.component';
 import { BookItemComponent } from './book/book-item/book-item.component';
 import { BookEditComponent } from './book/book-edit/book-edit.component';
 import { DatabindingComponent } from './databinding/databinding.component';
+import { PipeComponent } from './pipe/pipe.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DatabindingComponent } from './databinding/databinding.component';
     BookListComponent,
     BookItemComponent,
     BookEditComponent,
-    DatabindingComponent
+    DatabindingComponent,
+    PipeComponent
   ],
   imports: [
     BrowserModule,
