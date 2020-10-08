@@ -38,6 +38,8 @@ export class DatabindingComponent implements OnInit {
   screenX: number = 0;
   screenY: number = 0;
 
+  formInputText = '倉原';
+
   constructor (private sanitizer: DomSanitizer ) {
     this.safeMsg = sanitizer.bypassSecurityTrustHtml(this.sanitizeHtml);
     this.safeUrl = sanitizer.bypassSecurityTrustResourceUrl(this.sanitizeUrl);

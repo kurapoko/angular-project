@@ -36,3 +36,8 @@
 
 
 <h2>双方向バインディング</h2>
+<form>
+  <label for="name">名前：</label>
+  <input id="name" name="name" type="text" [(ngModel)]="formInputText"/>
+  <div>こんにちは {{formInputText}}</div>
+</form>
