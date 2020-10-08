@@ -31,6 +31,13 @@ export class DatabindingComponent implements OnInit {
 
   sanitizeUrl = 'https://www.yahoo.co.jp/';
 
+  currentTime = '---'
+
+  currentInputText = '';
+
+  screenX: number = 0;
+  screenY: number = 0;
+
   constructor (private sanitizer: DomSanitizer ) {
     this.safeMsg = sanitizer.bypassSecurityTrustHtml(this.sanitizeHtml);
     this.safeUrl = sanitizer.bypassSecurityTrustResourceUrl(this.sanitizeUrl);
@@ -39,4 +46,28 @@ export class DatabindingComponent implements OnInit {
   ngOnInit() {
   }
 
+  showCurrentTime(e:any) {
+    this.currentTime = new Date().toLocaleString();
+    console.log(e);
+  }
+
+  showCurrentPoint(e:any) {
+    this.screenX = e.screenX;
+    this.screenY = e.screenY;
+  }
+
+  outerClick(e:any):void {
+    console.log('outerをクリックしました。');
+  }
+
+  innerClick(e:any):void {
+    e.stopPropagation();
+    console.log('innerをクリックしました。');
+  }
+
+  showInputText(input: string) {
+    this.currentInputText += `
+    <li>${input}</li>
+    `
+  }
 }

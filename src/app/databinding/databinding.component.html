@@ -6,10 +6,33 @@
     <img [src]="image" alt="">
   </li>
 </ul>
-<h2>文字列として出力</h2>
+<h2>プロパティバインディング</h2>
+<h3>文字列として出力</h3>
 <div>{{sanitizeHtml}}</div>
-<h2>innerHTMLとして出力</h2>
+<h3>innerHTMLとして出力</h3>
 <div [innerHTML]="sanitizeHtml"></div>
-<h2>サニタイズした上で出力</h2>
+<h3>サニタイズした上で出力</h3>
 <div [innerHTML]="safeMsg"></div>
 <iframe [src]="safeUrl" frameborder="0"></iframe>
+
+<h2>イベントバインディング</h2>
+<h3>クリックイベント</h3>
+<button (click)="showCurrentTime($event)">現在時刻</button><time>{{currentTime}}</time>
+
+<h3>マウスイベント</h3>
+<div id="main" (mousemove)="showCurrentPoint($event)">
+  <p>{{screenY}}</p>
+  <p>{{screenX}}</p>
+</div>
+
+<h3>イベントバブリング</h3>
+<div id="outer" (click)="outerClick()">outer
+  <div id="inner" (click)="innerClick($event)">inner</div>
+</div>
+
+<h3>テンプレート参照変数による入力値の取得</h3>
+<input type="text" name="txt" id="txt" (keyup.enter)="showInputText(txt.value)" #txt />
+<ul [innerHTML]="currentInputText"></ul>
+
+
+<h2>双方向バインディング</h2>
