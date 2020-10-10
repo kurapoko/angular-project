@@ -21,6 +21,7 @@ import { BookItemComponent } from './book/book-item/book-item.component';
 import { BookEditComponent } from './book/book-edit/book-edit.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { PipeComponent } from './pipe/pipe.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { PipeComponent } from './pipe/pipe.component';
     BookItemComponent,
     BookEditComponent,
     DatabindingComponent,
-    PipeComponent
+    PipeComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
