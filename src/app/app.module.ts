@@ -22,6 +22,7 @@ import { BookEditComponent } from './book/book-edit/book-edit.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { FormComponent } from './form/form.component';
+import { MultiComponentsComponent } from './multi-components/multi-components.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FormComponent } from './form/form.component';
     BookEditComponent,
     DatabindingComponent,
     PipeComponent,
-    FormComponent
+    FormComponent,
+    MultiComponentsComponent
   ],
   imports: [
     BrowserModule,
