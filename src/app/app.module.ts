@@ -23,8 +23,8 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { FormComponent } from './form/form.component';
 import { MultiComponentsComponent } from './multi-components/multi-components.component';
-import { DetailComponent } from './multi-components/detail/detail.component';
-import { EditComponent } from './multi-components/edit/edit.component';
+import { MultiComponentsEditComponent } from './multi-components/multi-components-edit/multi-components-edit.component';
+import { MultiComponentsDetailComponent } from './multi-components/multi-components-detail/multi-components-detail.component';
 
 @NgModule({
   declarations: [
@@ -38,8 +38,8 @@ import { EditComponent } from './multi-components/edit/edit.component';
     PipeComponent,
     FormComponent,
     MultiComponentsComponent,
-    DetailComponent,
-    EditComponent
+    MultiComponentsEditComponent,
+    MultiComponentsDetailComponent
   ],
   imports: [
     BrowserModule,

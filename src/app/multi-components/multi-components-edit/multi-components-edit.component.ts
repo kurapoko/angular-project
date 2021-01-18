@@ -2,11 +2,11 @@ import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import { Book } from '../../class/book';
 
 @Component({
-  selector: 'app-edit',
-  templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.scss']
+  selector: 'app-multi-components-edit',
+  templateUrl: './multi-components-edit.component.html',
+  styleUrls: ['./multi-components-edit.component.scss']
 })
-export class EditComponent implements OnInit {
+export class MultiComponentsEditComponent implements OnInit {
   @Input() item: Book;
   @Output() edited = new EventEmitter<Book>();
 
@@ -17,6 +17,6 @@ export class EditComponent implements OnInit {
 
   onsubmit():void {
     this.edited.emit(this.item);
-    console.log(this.edited);
-  }
+    console.log(this.edited);  }
+
 }
