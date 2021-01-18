@@ -17,6 +17,6 @@ export class MultiComponentsEditComponent implements OnInit {
 
   onsubmit():void {
     this.edited.emit(this.item);
-    console.log(this.edited);  }
+  }
 
 }

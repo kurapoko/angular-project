@@ -5,3 +5,6 @@
 </div>
 <hr>
 <app-multi-components-detail [item]="selected"></app-multi-components-detail>
+<app-multi-components-edit [item]="selected" (edited)="onedited($event)">
+
+</app-multi-components-edit>

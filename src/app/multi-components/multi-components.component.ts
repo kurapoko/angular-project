@@ -33,4 +33,16 @@ export class MultiComponentsComponent implements OnInit {
   onclick(book:Book) {
     this.selected = book;
   }
+
+  onedited(book: Book) {
+    for (let item of this.books) {
+      if (item.isbn === book.isbn) {
+        item.title = book.title;
+        item.price = book.price;
+        item.publisher = book.publisher;
+      }
+    }
+
+    this.selected = null;
+  }
 }
