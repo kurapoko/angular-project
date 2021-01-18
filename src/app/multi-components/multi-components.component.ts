@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Book } from '../class/book'
 
 @Component({
   selector: 'app-multi-components',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MultiComponentsComponent implements OnInit {
 
+  selected: Book;
+
+  books: Book[]  = [
+    {
+      isbn: "123-4567-89",
+      title: "ハリーポッター",
+      price: 2500,
+      publisher: "静山社"
+    },
+    {
+      isbn: "123-4567-89",
+      title: "アガサクリスティ",
+      price: 2500,
+      publisher: "静山社"
+    },
+  ];
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onclick(book:Book) {
+    this.selected = book;
+  }
 }

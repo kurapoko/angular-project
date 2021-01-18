@@ -1,1 +1,7 @@
-<p>multi-components works!</p>
+<div>
+  <span *ngFor="let book of books">
+    <button (click)="onclick(book)">{{ book.title }}</button>
+  </span>
+</div>
+<hr>
+<app-detail [item]="selected"></app-detail>

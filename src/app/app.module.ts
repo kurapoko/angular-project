@@ -23,6 +23,8 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { FormComponent } from './form/form.component';
 import { MultiComponentsComponent } from './multi-components/multi-components.component';
+import { DetailComponent } from './multi-components/detail/detail.component';
+import { EditComponent } from './multi-components/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { MultiComponentsComponent } from './multi-components/multi-components.co
     DatabindingComponent,
     PipeComponent,
     FormComponent,
-    MultiComponentsComponent
+    MultiComponentsComponent,
+    DetailComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

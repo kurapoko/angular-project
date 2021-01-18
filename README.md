@@ -2,6 +2,11 @@
 
 ## Angular アプリケーションプログラミング
 
+https://www.amazon.co.jp/dp/B074M54GM5/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1
+
+この本の学習備忘録
+コマンドは下記参照。
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
 
 ## Development server
