@@ -1,29 +1,10 @@
-:host {
-  padding: 40px;
-  display: block;
+.container {
+  margin: 0 auto;
+  max-width: 900px;
 }
-
-#main {
-  padding: 10px;
-  position: relative;
-  margin: 50px auto 0;
+.mouse-event {
   width: 300px;
-  height: 400px;
-  border: 1px solid black;
-}
-
-#outer {
-  height: 200px;
-  width: 350px;
-  margin: 50px;
+  height: 300px;
+  border: 1px solid #000;
   padding: 10px;
-  border: 1px solid #000;
-}
-
-#inner {
-  height: 10px;
-  width: 100px;
-  margin: 50px 0 0 30px;
-  padding: 20px;
-  border: 1px solid #000;
 }

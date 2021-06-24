@@ -8,68 +8,33 @@ import { DomSanitizer, SafeHtml, SafeResourceUrl } from '@angular/platform-brows
 })
 export class DatabindingComponent implements OnInit {
 
-  name = 'Angular'
+  currrentTime = '';
 
-  list = [
-    {id: 1, name: 'kurahara'},
-    {id: 2, name: 'masahiro'}
-  ]
+  // マウスオンイベント
+  screenX = 0;
+  screenY = 0;
+  pageX = 0;
+  pageY = 0;
+  clientX = 0;
+  clientY = 0;
+  offsetX = 0;
+  offsetY = 0;
 
-  image = 'http://www.wings.msn.to/image/wings.jpg';
 
-  safeMsg: SafeHtml;
-  safeUrl: SafeResourceUrl;
-
-  sanitizeHtml: string = `
-    <div>
-      <p>WINGS プロジェクト</p>
-    </div>
-    <a href="https://www.yahoo.co.jp/">Yahoo.co.jp</a>
-    <button>同意する</button>
-    <input type="button" onclick="alert('OK')" value="クリック">
-  `
-
-  sanitizeUrl = 'https://www.yahoo.co.jp/';
-
-  currentTime = '---'
-
-  currentInputText = '';
-
-  screenX: number = 0;
-  screenY: number = 0;
-
-  formInputText = '倉原';
-
-  constructor (private sanitizer: DomSanitizer ) {
-    this.safeMsg = sanitizer.bypassSecurityTrustHtml(this.sanitizeHtml);
-    this.safeUrl = sanitizer.bypassSecurityTrustResourceUrl(this.sanitizeUrl);
+  constructor () {
   }
 
   ngOnInit() {
   }
 
-  showCurrentTime(e:any) {
-    this.currentTime = new Date().toLocaleString();
-    console.log(e);
+  showCurrentTime(e) {
+    this.currrentTime = new Date().toDateString();
+    console.log(e.clientY);
+    console.dir(e);
   }
 
-  showCurrentPoint(e:any) {
+  showMouseonEvent(e) {
     this.screenX = e.screenX;
     this.screenY = e.screenY;
-  }
-
-  outerClick(e:any):void {
-    console.log('outerをクリックしました。');
-  }
-
-  innerClick(e:any):void {
-    e.stopPropagation();
-    console.log('innerをクリックしました。');
-  }
-
-  showInputText(input: string) {
-    this.currentInputText += `
-    <li>${input}</li>
-    `
   }
 }
