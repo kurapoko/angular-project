@@ -13,13 +13,9 @@ export class DatabindingComponent implements OnInit {
   // マウスオンイベント
   screenX = 0;
   screenY = 0;
-  pageX = 0;
-  pageY = 0;
-  clientX = 0;
-  clientY = 0;
-  offsetX = 0;
-  offsetY = 0;
 
+  // 双方向バインディング
+  myName: string;
 
   constructor () {
   }

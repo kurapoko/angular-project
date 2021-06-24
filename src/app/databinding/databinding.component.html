@@ -12,3 +12,14 @@
     </div>
   </div>
 </section>
+<section class="container">
+  <h2>双方向バインディング</h2>
+  <div>
+    <h3>名前表示</h3>
+    <form>
+      <label for="name">名前；</label>
+      <input id="name" name="name" type="text" [(ngModel)]="myName">
+      <div *ngIf="myName">こんにちは、{{myName}}さん</div>
+    </form>
+  </div>
+</section>
